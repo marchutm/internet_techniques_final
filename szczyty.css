@@ -1,0 +1,412 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+}
+body{
+	background-color: #fff;
+	font-size: 20px;
+	font-family: Times New Roman, sans-serif;
+}
+h1{
+	color: #006400;
+	text-shadow: 5px 5px 5px #696969;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+h2{
+	color: #006400;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-shadow: 2px 2px 2px #696969;
+}
+nav{
+	width: 80%;
+	color: #fff;
+	background-color: #006400;
+	margin: 0 auto;
+	height: 100px;
+	margin-top: 30px;
+	line-height: 80px;
+}
+.menu{
+  padding: 0px;
+  margin:0px;
+
+}
+.menu li{
+  float:left;
+  list-style:none;
+  margin:0; 
+}
+.menu li a{
+  margin-top:10px;
+  display: inline-block;
+  text-decoration:none;
+  position:relative;
+  color: #fff;
+  text-transform:uppercase;
+  text-align: center;
+  align-items: center;
+  width: 180px;
+}
+.menu li:hover a{
+    background-color: #006400;
+    color: #fff;
+	margin-top: 0;
+}
+
+.menu li ul{
+   margin: 0;
+   padding: 0;
+   position: absolute;
+  display:none;
+  z-index: 10;
+	max-width:200px;
+	
+}
+.menu li:hover ul{
+  display:block;
+  max-height: 150px;
+  overflow-y: scroll;
+  width: 100%;
+  background-color: #fff;
+  color: #006400;
+}
+
+.menu li ul li{
+  display:block;
+  width: 100%;
+}
+.menu li ul li a{
+  width: 100%;
+}
+.menu li a:nth-child(1){
+width: 180px;
+}
+.menu li a:nth-child(2) {
+width: 180px;
+}
+.menu li a:nth-child(4) {
+width: 180px;
+}
+.menu li a:nth-child(4) {
+width: 180px;
+}
+.menu li a:nth-child(5) {
+width: 180px;
+}
+.search-container {
+
+    padding: 25px 15px;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+	justify-content: center;
+}
+
+.search-container form {
+    display: flex;
+	justify-content: center;
+}
+
+.search-container input[type="text"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #fff;
+    color: #000;
+	justify-content: center;
+	width: 130px;
+}
+
+.search-container button[type="submit"] {
+    width: 80px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+.search-container button[type="submit"]:hover{
+	background-color:  #006400;
+	color: #fff;
+	border: 1px solid #fff;
+}
+#container{
+	position: relative;
+  display: flex;
+	width: 100%;
+}
+#text {
+  width: 50%;
+  margin-right: 5px;
+}
+#image {
+  width: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  max-height: 400px;
+}
+img{
+	width:100%;
+	max-height:350px;
+}
+figcaption{
+    text-align: center;
+    font-style: italic; 
+    margin-top: 10px; 
+	margin-bottom: 5px;
+}
+#text-box{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.fa-comment {
+  font-size: 50px;
+  position: fixed;
+  top: 50%;
+  right: 10%	;
+  transform: translateY(-50%);
+  float: right;	
+  color: #000;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+  .tooltip {
+    position: fixed;
+    right: 13%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    bottom: 100%;
+    right: 10%;
+    margin-left: -60px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+	.form {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.form h1 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.form .email-input,
+.form .question-input {
+  width: 100%;
+  height: 36px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form .send-button {
+  width: 100%;
+  height: 36px;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form .send-button:hover {
+  background-color: #fff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+.form .close-button{
+	background-color: #006400;
+	color: #fff;
+	width: 20px;
+	height: 25px;
+	cursor: pointer;
+}
+
+
+iframe{
+	width:100%;
+	border:0;
+}
+#map{
+	width: 100%;
+}
+
+#line{
+	border-bottom: 3px solid #006400;
+	width: 100%;
+}
+footer {
+  background-color: #006400;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 80%;
+}
+
+#comment-div{
+	width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.comment-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.comment-form input[type="text"], .comment-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.comment-button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-button:hover {
+    background-color: #45a049;
+}
+
+main{
+	width: 80%
+}
+#comments {
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+#comments p {
+  margin-bottom: 20px;
+}
+#comments p em {
+  font-size: 20px;
+  color: gray;
+}
+#comments p span {
+	color: red;
+}
+@media only screen and (max-width: 1425px) {
+	nav{
+		height: 200px;
+	}
+}
+@media only screen and (max-width: 1200px){
+	#text {
+  width: 100%;
+}
+#image {
+	margin-top:10px;
+  width: 100%;
+  margin-bottom:10px;
+}
+#container{
+  display: inline;
+}
+}
+@media only screen and (max-width: 750px){
+	nav{
+		height: 300px;
+	}
+}
+@media only screen and (max-width: 530px){
+	nav{
+		height: 400px;
+	}
+	.menu li:hover ul{
+		display:inline-block;
+	}
+}
+@media only screen and (max-width: 450px){
+	nav{
+		height: 550px;
+		width: 60%
+	}
+	.menu li:hover ul{
+		display:inline-block;
+	}
+}
